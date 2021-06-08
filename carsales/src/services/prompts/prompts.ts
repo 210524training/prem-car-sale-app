@@ -54,7 +54,7 @@ export async function confirmPassword(password: string): Promise<boolean> {
 
 export async function getId(): Promise<number> {
   const response = await questionFunc(
-    'Enter the car ID number: ', (answer) => Number.isInteger(Number(answer)) && Number(answer) >= 1000,
+    'Enter the car ID number: ', (answer) => Number.isInteger(Number(answer)) && Number(answer) >= 1,
   );
   return Number(response);
 }
