@@ -106,6 +106,7 @@ export class UserService {
     await this.offers.updateAccept(carId);
     await this.cars.updateOwner(owner, carId);
     await this.rejectAllPendingOffers(carId);
+    console.log('Offer Accepted.');
   }
 
   async rejectAllPendingOffers(carId: number): Promise<void> {
@@ -119,6 +120,7 @@ export class UserService {
     const carId = await getId();
 
     await this.offers.updateReject(carId);
+    console.log('Offer Rejected.');
   }
 
   async ownedCars(): Promise<void> {
