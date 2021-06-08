@@ -94,7 +94,7 @@ export async function getStartPrice(): Promise<number> {
 
 export async function getCarOffer(): Promise<number> {
   const response = await questionFunc(
-    'Enter and offer: ', (answer) => Number.isInteger(Number(answer)) && Number(answer) >= 0,
+    'Enter an offer: ', (answer) => Number.isInteger(Number(answer)) && Number(answer) >= 0,
   );
   return Number(response);
 }
